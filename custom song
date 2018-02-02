@@ -1,0 +1,30 @@
+# NAME OF SONG: Into you by Ariana Grande
+# SHEET MUSIC:https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0169563
+# BPM USED:https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0169563
+use_bpm 160
+use_synth :piano
+1.times do
+  play:d5
+  sleep 1
+  play:b4
+  sleep 1
+  play:a4
+  sleep 0.75
+  play:b4
+  sleep 0.25
+  play:a4
+  sleep 1
+end
+1.times do
+  sleep 1
+  play:g4
+  sleep 0.5
+  play:e4
+  sleep 0.5
+  play:g4
+  sleep 1
+  play:b4
+  sleep 1
+  play:b4, sustain:3
+  sleep 2.5
+end
