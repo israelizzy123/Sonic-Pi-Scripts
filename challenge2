@@ -1,7 +1,7 @@
-my_variable = 21
-use_synth :piano
-87.times do
-  play my_variable
-  my_variable = my_variable + 1
-  sleep 0.25
+my_variable = 21 <- - it's starts at this note
+use_synth :piano <- - is the sound that I want
+87.times do <- - through playing the notes A0 to C108
+  play my_variable <- - this helps with the next line of code 
+  my_variable = my_variable + 1 <- - it keeps on going adding the notes
+  sleep 0.25 <- - how long it stops for
 end
