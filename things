@@ -1,0 +1,16 @@
+# Stranger Things Main Theme
+# NOTE: Each measure's total sleep adds up to 4 because the time signature is 4/4
+use_bpm 160
+use_synth:saw
+stranger_notes = [:c2, :e2, :g2, :b2, :c3, :b2, :g2, :e2] # an array is a list of values
+index = 0
+
+
+live_loop :stranger do
+  8.times do #plays this function each time for each note
+    play stranger_notes[index] #goes with the function of stranger_notes and plays those notes
+    sleep 0.5 #rests for half a second
+    index = index + 1 #adds one each time to get to all the notes
+  end
+  index = 0 #resets the index to 0 to keep the function play in the live loop
+end
