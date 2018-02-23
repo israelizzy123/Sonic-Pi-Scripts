@@ -1,0 +1,40 @@
+use_bpm 160
+use_synth :piano
+i=0
+y= :drum_tom_lo_soft
+n=0
+# lines 4-17 well when it's first times do
+#and the notes play and then they rest by
+#the sleep as known as rest so the notes will
+#know what to do.
+into_you_notes=[:d5,:b4,:a4,:b4,:a4]
+# I'm so into you
+1.times do
+  index=0
+  play into_you_notes[index]
+  sleep 0.25
+  index = index + 1
+  puts index
+end
+4.times do
+  sample :drum_tom_lo_soft ,amp: n
+  sleep 0.5
+  sample  :drum_tom_lo_soft ,amp: n
+  sleep 0.5
+  n= n+3
+end
+# then after the first chorus it ends then the
+# second chorus and it plays different notes
+# 22-35.
+#i can barely breathe
+use_bpm 160
+use_synth :piano
+notes = [:g4, :e4, :g4, :b4,:b4, sustain: (1,3),:r,:r,:r,:g]
+
+1.times do
+  # assign a value to 'a' using the .choose method from the Randomisation reading on Tuesday
+  d = choose(notes)
+  print d
+  play d
+  sleep 0.5
+end
