@@ -33,14 +33,17 @@ define :kanye do
   sample kanye_love
   sleep 12
 end
-
-live_loop :drum_beat do
+define :drum do
   sample sample_used, amp: 2
   sleep 0.5
   sample sample_used, amp: 2
   sleep 1.5
   sample sample_used, amp: 2
   sleep 2
+end
+
+live_loop :drum_beat do
+  drum
 end
 
 # use a variable so that each time the live_loop repeats itself the volume of the synth increases in amplitude (start the amplitude at 0 so it is inaudible to start!)
