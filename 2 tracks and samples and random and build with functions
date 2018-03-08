@@ -10,7 +10,7 @@ last = "C:/Users/israel_gonzalez/last/Ariana_Grande_-_One_Last_Time_Official[Mp3
 #know what to do.
 into_you_notes=[:d5,:b4,:a4,:b4,:a4]
 you = [:g4,:e4,:g4,:b4,:b4,:g,:a,:g]
-# I'm so into you
+# well for 4.times do it does the build up and uses sample y and plays drums. 
 1.times do
   index=0
   play into_you_notes[index]
@@ -34,7 +34,8 @@ define :sound do
   sleep 12
 end
 sound
-
+# line 36 youhave to call the define sound and call it so it will work 
+# also that strategy 2 will play random notes that i put and also it also for the live_loop it repeats. 
 define:strategy2 do
   # assign a value to 'b' that will be used as the index value
   b = rand_i(6)
@@ -42,7 +43,7 @@ define:strategy2 do
   play you[b]
   sleep 0.5
 end
-
+#well in the 2.times part I did was that I put my sample from One last time and then I played it at 
 
 2.times do
   last
