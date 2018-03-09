@@ -1,0 +1,25 @@
+use_bpm 160
+use_synth :saw
+
+#define your function with parameters
+define :play_eighth_notes do |a,b,c,d,e,f,g,h,s|
+  play a
+  sleep s
+  play b
+  sleep s
+  play c
+  sleep s
+  play d
+  sleep s
+  play e
+  sleep s
+  play f
+  sleep s
+  play g
+  sleep s
+  play h
+  sleep s
+end
+live_loop :things do
+  play_eighth_notes :c2,:e2,:g2,:b2,:c3,:b2,:g2,:e2, 0.5
+end
