@@ -1,0 +1,63 @@
+use_bpm 160
+use_synth :piano
+i=0
+y= :drum_tom_lo_soft
+n=0
+last = "C:/Users/israel_gonzalez/last/Ariana_Grande_-_One_Last_Time_Official[Mp3Converter.net].wav"
+# lines 3-6 well when this are help in the methods I used to do my song and for i=index n=varaiable
+#and y is the sample im using is drum_tom_lo_soft also for into_you_notes and you
+
+into_you_notes=[:d5,:b4,:a4,:b4,:a4]
+you = [:g4,:e4,:g4,:b4,:b4,:g,:a,:g]
+# I'm so into you
+1.times do
+  index=0
+  play into_you_notes[index]
+  sleep 0.25
+  index = index + 1
+  puts index
+end
+4.times do
+  sample y ,amp: n
+  sleep 0.5
+  sample y ,amp: n
+  sleep 0.5
+  n=n+3
+end
+# then after the first chorus it ends then the
+# second chorus and it plays different notes
+# 22-35.
+#i can barely breathe
+define :sound do
+  sample last
+  sleep 12
+end
+sound
+define :strategy2 do |a,b,c,d,e,f,g,h,s|
+  play a
+  sleep s
+  play b
+  sleep s
+  play c
+  sleep s
+  play d
+  sleep s
+  play e
+  sleep s
+  play f
+  sleep s
+  play g
+  sleep s
+  play h
+  sleep s
+end
+
+
+
+
+2.times do
+  last
+end
+live_loop :strategy2 do
+  strategy2 :g4,:e4,:g4,:b4,:b4,:g,:a,:g, 0.5
+end
